@@ -13,7 +13,7 @@ def roman_to_int(roman_string):
                     next_value = numbers[roman_string[charnum + 1]]
                 if numbers[char] < next_value:
                     result += next_value - numbers[char]
-                    charnum += 2
+                    charnum += 1
                 else:
                     result += numbers[char]
             else:
