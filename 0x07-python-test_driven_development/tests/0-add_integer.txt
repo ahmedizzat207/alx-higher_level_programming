@@ -1,0 +1,30 @@
+This is the testing document for the 0-add_integer.py file
+
+The 0-add_integer.py contain one function which is the (add_integer) function and it is definded as this:
+
+def add_integer(a, b=98):
+
+The function adds ONLY integers and float in integer form and will raise a type error if any other type is inserted.
+
+Examples:
+	The coming examples domenstrate who the function works:
+		>>> from 0-add_integer import add_integer
+		>>> add_integer(1, 2)
+		3
+		>>> add_integer(100, -2)
+		98
+	if the parameter b is a default parameter to 98 let's see an example:
+		>>> add_integer(2)
+		100
+	Any passed float type parameter will be floored (converted to integer):
+		>>> add_integer(100.3, -2)
+		98
+	any other type passed will raise a TypeError:
+		>>> add_integer(4, "School")
+		Traceback (most recent call last):
+			...
+		TypeError: b must be an integer
+		>>> add_integer(None)
+		TraceBack (most recent call last):
+			...
+		TypeError: a must be an integer
