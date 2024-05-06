@@ -7,24 +7,39 @@ def add_integer(a, b=98):
 The function adds ONLY integers and float in integer form and will raise a type error if any other type is inserted.
 
 Examples:
+	First we need to import the function's module and because the module
+	is not in the same directory we need to add the function's module
+	directory to the sys.path list:
+
+		>>> import sys
+		>>> sys.path[0] = '/home/alx-higher_level_programming/0x07-python-test_driven_development'
+		>>> add_integer = __import__('0-add_integer').add_integer
+
 	The coming examples domenstrate who the function works:
-		>>> from 0-add_integer import add_integer
+
 		>>> add_integer(1, 2)
 		3
 		>>> add_integer(100, -2)
 		98
+
 	if the parameter b is a default parameter to 98 let's see an example:
+
 		>>> add_integer(2)
 		100
+
 	Any passed float type parameter will be floored (converted to integer):
+
 		>>> add_integer(100.3, -2)
 		98
+
 	any other type passed will raise a TypeError:
 		>>> add_integer(4, "School")
 		Traceback (most recent call last):
 			...
 		TypeError: b must be an integer
 		>>> add_integer(None)
-		TraceBack (most recent call last):
+		Traceback (most recent call last):
 			...
 		TypeError: a must be an integer
+
+	This is the end of the Examples.
