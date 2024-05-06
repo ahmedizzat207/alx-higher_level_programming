@@ -12,7 +12,7 @@ Examples:
 	directory to the sys.path list:
 
 		>>> import sys
-		>>> sys.path[0] = '/home/alx-higher_level_programming/0x07-python-test_driven_development'
+		>>> sys.path[0] = '..'
 		>>> add_integer = __import__('0-add_integer').add_integer
 
 	The coming examples domenstrate who the function works:
